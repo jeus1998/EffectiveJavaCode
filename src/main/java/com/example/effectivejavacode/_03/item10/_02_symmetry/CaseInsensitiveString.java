@@ -1,4 +1,4 @@
-package com.example.effectivejavacode._03.item10._02_;
+package com.example.effectivejavacode._03.item10._02_symmetry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class CaseInsensitiveString {
     @Override public boolean equals(Object o) {
         if (o instanceof CaseInsensitiveString)
             return s.equalsIgnoreCase(((CaseInsensitiveString) o).s);
-        if (o instanceof String)  // 한 방향으로만 작동한다!
+        if (o instanceof String)
             return s.equalsIgnoreCase((String) o);
         return false;
     }
@@ -23,7 +23,9 @@ public class CaseInsensitiveString {
 
         List<CaseInsensitiveString> list = new ArrayList<>();
         list.add(cis);
-        System.out.println(cis.equals(s)); // true
-        System.out.println(list.contains(s)); // false
+
+        System.out.println(cis.equals(s));
+        System.out.println(list.contains(s));
+        System.out.println(s.equals(cis));
     }
 }
