@@ -16,6 +16,10 @@ public class Thing {
     public static List<SomeThing> privateValuesAsList(){
         return Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
     }
+
+    /**
+     * 방어적 복사
+     */
     public static SomeThing[] getPrivateValues(){
         return PRIVATE_VALUES.clone();
     }
